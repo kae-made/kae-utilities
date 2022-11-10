@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Version>0.9.0</Version>
+    <Authors>Hiroshi Ota</Authors>
+    <Copyright>Copyright (c) Knowledge &amp; Experience. All rights reserved.</Copyright>
+    <Company>Knowledge &amp; Experience</Company>
+    <PackageIcon>kae-log-no-chart-128.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/kae-made/kae-utilities</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kae-made/kae-utilities</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\OneDrive\画像\kae-log-no-chart-128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Kae.Utility.Logging" Version="1.2.0" />
+  </ItemGroup>
+
+</Project>
