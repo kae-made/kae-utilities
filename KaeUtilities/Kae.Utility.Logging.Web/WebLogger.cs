@@ -24,9 +24,30 @@ namespace Kae.Utility.Logging.Web
         {
             this.webLog = webLog;
         }
-        protected override Task LogInternal(Level level, string log, string timestamp)
+        protected override async Task LogInternal(Level level, string log, string timestamp, Exception ex)
         {
-            throw new NotImplementedException();
+            string logMsg = $"{log} @ {timestamp}";
+            if (level== Level.Info)
+            {
+                logger.LogInfo(logMsg);
+            }
+            else if (level== Level.Warn)
+            {
+                logger.LogWarning(logMsg);
+            }
+            else if (level== Level.Erro)
+            {
+                logger.LogError($"exception - {ex.Message}");
+                logger.LogError(logMsg);
+            }
+            else
+            {
+                if (ex != null)
+                {
+                    logger.LogError($"exception - {ex.Message}");
+                }
+                logger.LogError(logMsg);
+            }
         }
     }
 }

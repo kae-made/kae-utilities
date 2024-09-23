@@ -18,12 +18,19 @@ namespace Kae.Utility.Logging
         }
         public Level ShowLevel
         {
-            get; set;
+            get; protected set;
         }
 
-        public async Task Log(Level level, string log)
+        public Exception LastException
         {
-            await LogInternal(level, log, DateTime.Now.ToString("yyyy/MM/ddTHH:mm:ss.fff"));
+            get; protected set;
+        }
+
+        public async Task Log(Level level, string log, Exception ex=null)
+        {
+            ShowLevel = level;
+            LastException = ex;
+            await LogInternal(level, log, DateTime.Now.ToString("yyyy/MM/ddTHH:mm:ss.fff"), ex);
         }
 
         public async Task LogInfo(string log)
@@ -34,11 +41,11 @@ namespace Kae.Utility.Logging
         {
             await Log(Level.Warn, log);
         }
-        public async Task LogError(string log)
+        public async Task LogError(string log, Exception ex=null)
         {
-            await Log(Level.Erro, log);
+            await Log(Level.Erro, log, ex);
         }
 
-        protected abstract Task LogInternal(Level level, string log, string timestamp);
+        protected abstract Task LogInternal(Level level, string log, string timestamp, Exception ex);
     }
 }

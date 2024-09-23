@@ -18,9 +18,10 @@ namespace Kae.Utility.Logging
             return logger;
         }
 
-        protected override async Task LogInternal(Level level, string log, string timestamp)
+        protected override async Task LogInternal(Level level, string log, string timestamp, Exception ex)
         {
             Debug.WriteLine($"[{level}]{timestamp}: {log}");
+            Debug.WriteLine($"Exception : {ex.Message}");
         }
     }
 }

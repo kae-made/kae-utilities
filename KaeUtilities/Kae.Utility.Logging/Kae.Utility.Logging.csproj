@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>1.2.0</Version>
+    <Version>1.4</Version>
     <Authors>Hiroshi Ota</Authors>
     <Company>Knowledge &amp; Experience</Company>
     <Description>Logging framework for verious apprication with Kae namespace libraries</Description>
@@ -11,10 +11,12 @@
     <Copyright>Copyright (c) Knowledge &amp; Experience. All rights reserved.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>kae-log-no-chart-128.png</PackageIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\OneDrive\画像\kae-log-no-chart-128.png">
+    <None Update="kae-log-no-chart-128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

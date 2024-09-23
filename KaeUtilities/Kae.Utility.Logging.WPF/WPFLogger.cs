@@ -31,14 +31,16 @@ namespace Kae.Utility.Logging.WPF
             this.logBlock = logBlock;
         }
 
-        protected override async Task LogInternal(Level level, string log, string timestamp)
+        protected override async Task LogInternal(Level level, string log, string timestamp, Exception ex)
         {
             logBlock.Dispatcher.Invoke(() =>
             {
                 var sb = new StringBuilder();
                 var writer = new StringWriter(sb);
                 writer.WriteLine($"{level.ToString()}:{timestamp} {log}");
-                writer.Write(logBlock.Text);
+                writer.WriteLine(logBlock.Text);
+                writer.WriteLine("Exception : ");
+                writer.Write(ex.Message);
 
                 logBlock.Text = sb.ToString();
             });

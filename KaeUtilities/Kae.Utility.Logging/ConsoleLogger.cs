@@ -25,11 +25,12 @@ namespace Kae.Utility.Logging
 
         }
 
-        protected override async Task LogInternal(Level level, string log, string timestamp)
+        protected override async Task LogInternal(Level level, string log, string timestamp, Exception ex)
         {
             if (ShowLevel >= level)
             {
                 Console.WriteLine($"[{level}]{timestamp}: {log}");
+                Console.WriteLine($"exception:{ex.Message}");
             }
         }
     }
