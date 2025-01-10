@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kae.Utility.Logging", "Kae.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kae.Utility.Json", "Kae.Utility.Json\Kae.Utility.Json.csproj", "{BD1601B6-FA9A-45D3-90C0-1D96DA63C478}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kae.Utility.Logging.WPF", "Kae.Utility.Logging.WPF\Kae.Utility.Logging.WPF.csproj", "{8767C2B1-DE22-4BC0-B6A5-20BC872F8B65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kae.Utility.Logging.WPF", "Kae.Utility.Logging.WPF\Kae.Utility.Logging.WPF.csproj", "{8767C2B1-DE22-4BC0-B6A5-20BC872F8B65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kae.Utility.Logging.Web", "Kae.Utility.Logging.Web\Kae.Utility.Logging.Web.csproj", "{CF466B7B-E08B-4F34-BD71-8A6C42BF8249}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kae.Utility.Logging.Web", "Kae.Utility.Logging.Web\Kae.Utility.Logging.Web.csproj", "{CF466B7B-E08B-4F34-BD71-8A6C42BF8249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppTest", "WpfAppTest\WpfAppTest.csproj", "{FDFB78BD-ACCF-4BD3-93EC-5D750D38CCA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CF466B7B-E08B-4F34-BD71-8A6C42BF8249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF466B7B-E08B-4F34-BD71-8A6C42BF8249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF466B7B-E08B-4F34-BD71-8A6C42BF8249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDFB78BD-ACCF-4BD3-93EC-5D750D38CCA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDFB78BD-ACCF-4BD3-93EC-5D750D38CCA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDFB78BD-ACCF-4BD3-93EC-5D750D38CCA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDFB78BD-ACCF-4BD3-93EC-5D750D38CCA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
